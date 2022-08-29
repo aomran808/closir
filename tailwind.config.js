@@ -8,6 +8,12 @@ module.exports = {
         openSans: "Open Sans",
         merriWeather: "Merriweather Sans",
       },
+      spacing: {
+        main: "1029px",
+      },
+      maxWidth: {
+        main: "1029px",
+      },
     },
   },
   plugins: [],

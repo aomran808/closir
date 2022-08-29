@@ -8,4 +8,13 @@
     padding: 0;
     box-sizing: border-box;
   }
+  h1 {
+    @apply text-3xl font-merriWeather;
+  }
+  h2 {
+    @apply text-2xl  font-merriWeather;
+  }
+  h3 {
+    @apply text-xl  font-merriWeather;
+  }
 }

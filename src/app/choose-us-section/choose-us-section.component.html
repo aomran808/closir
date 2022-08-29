@@ -1,0 +1,10 @@
+<div class="max-w-main mb-14 mx-auto">
+  <h1 class="text-center mb-10">Why Choose Us</h1>
+  <div class="flex justify-between gap-10 flex-wrap">
+    <app-card
+      *ngFor="let data of chooseUsData"
+      [cardData]="data"
+      [centered]="true"
+    ></app-card>
+  </div>
+</div>

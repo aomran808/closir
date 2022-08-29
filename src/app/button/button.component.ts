@@ -9,5 +9,5 @@ export class ButtonComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-  @Input() text?: string;
+  @Input() text: string = 'click';
 }
