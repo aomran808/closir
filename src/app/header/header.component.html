@@ -1,7 +1,11 @@
-<div class="font-merriWeather bg-white h-16 text-black flex items-center">
-  <div class="flex justify-between w-main mx-auto">
-    <h2 class="uppercase cursor-pointer font-bold">CLOSIR</h2>
-    <div class="flex gap-4 items-center">
+<div
+  class="font-merriWeather bg-white h-16 text-black flex items-center mobile-padding sticky top-0 z-50"
+>
+  <div class="flex justify-between w-main mx-auto items-center">
+    <a routerLink="/"
+      ><h2 class="uppercase cursor-pointer font-bold">CLOSIR</h2></a
+    >
+    <div class="gap-4 items-center hidden lg:flex">
       <div
         class="uppercase text-xs cursor-pointer hover:scale-110 transition-all"
       >
@@ -27,6 +31,71 @@
       >
         contact
       </div>
+    </div>
+    <img
+      class="cursor-pointer h-10 w-10 sm:block lg:hidden"
+      src="../../assets/icons/icons8-menu-rounded-50.png"
+      alt="menu"
+      *ngIf="!isMobileMenuOpen"
+      (click)="toggleMobileMenuIcon(true)"
+    />
+    <img
+      class="cursor-pointer h-10 w-10 sm:block lg:hidden"
+      src="../../assets/icons/icons8-close-50.png"
+      alt="close"
+      *ngIf="isMobileMenuOpen"
+      (click)="toggleMobileMenuIcon(false)"
+    />
+  </div>
+</div>
+
+<!-- mobile menu overlay -->
+<div
+  *ngIf="isMobileMenuOpen"
+  class="bg-black opacity-70 z-30 fixed top-0 left-0 h-screen w-full"
+></div>
+
+<!-- mobile menu  -->
+<div
+  [ngClass]="{
+    'bg-white h-screen w-3/4 fixed top-0  z-50 pb-20 font-merriWeather  duration-500 ': true,
+    'left-[-100%]': !isMobileMenuOpen,
+    'left-0': isMobileMenuOpen
+  }"
+>
+  <a routerLink="/">
+    <h2
+      class="uppercase cursor-pointer font-bold h-16 flex items-center mobile-padding"
+    >
+      CLOSIR
+    </h2></a
+  >
+
+  <div class="w-full py-12">
+    <div
+      class="uppercase text-xs cursor-pointer flex h-16 w-full justify-center hover:bg-black hover:text-white"
+    >
+      <div class="flex h-16 items-center">products</div>
+    </div>
+    <div
+      class="uppercase text-xs cursor-pointer flex h-16 w-full justify-center hover:bg-black hover:text-white"
+    >
+      <div class="flex h-16 items-center">services</div>
+    </div>
+    <div
+      class="uppercase text-xs cursor-pointer flex h-16 w-full justify-center hover:bg-black hover:text-white"
+    >
+      <div class="flex h-16 items-center">about</div>
+    </div>
+    <div
+      class="uppercase text-xs cursor-pointer flex h-16 w-full justify-center hover:bg-black hover:text-white"
+    >
+      <div class="flex h-16 items-center">jobs</div>
+    </div>
+    <div
+      class="uppercase text-xs cursor-pointer flex h-16 w-full justify-center hover:bg-black hover:text-white"
+    >
+      <div class="flex h-16 items-center">contact</div>
     </div>
   </div>
 </div>

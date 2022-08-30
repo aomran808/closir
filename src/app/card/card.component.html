@@ -1,11 +1,17 @@
-<div [ngClass]="{ 'items-center': centered, 'w-[310px] flex flex-col': true }">
+<div
+  [ngClass]="{
+    'items-center': centered,
+    'hover:shadow-xl p-2 rounded-lg transition ease-in-out delay-150 hover:scale-105 duration-300 cursor-pointer':
+      !centered,
+    'w-[310px] flex flex-col': true
+  }"
+>
   <img
     src="{{ cardData?.imgUrl }}"
-    [ngClass]="centered ? '' : ''"
     [ngClass]="{
-      'filter-blue w-12 h-12': centered,
-      'w-full h-48 object-cover': !centered,
-      'mb-3': true
+      'w-12 h-12': centered,
+      'w-full h-48': !centered,
+      'mb-3 ': true
     }"
   />
   <h3 class="mb-4">{{ cardData?.title }}</h3>

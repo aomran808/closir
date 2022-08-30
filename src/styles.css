@@ -17,4 +17,16 @@
   h3 {
     @apply text-xl  font-merriWeather;
   }
+  a {
+    @apply text-[8px] md:text-xs cursor-pointer;
+  }
+  img {
+    @apply object-cover;
+  }
+}
+
+@layer components {
+  .mobile-padding {
+    @apply px-4 lg:px-0;
+  }
 }

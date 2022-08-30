@@ -11,6 +11,7 @@ import { CardContainerComponent } from './choose-us-section/choose-us-section.co
 import { OurWorkSectionComponent } from './our-work-section/our-work-section.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './footer/footer.component';
     OurWorkSectionComponent,
     AboutUsComponent,
     FooterComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
